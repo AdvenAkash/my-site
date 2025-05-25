@@ -1,0 +1,43 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %} 
+  This Post Title
+{% endblock %} 
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/post-detail.css' %}" />
+{% endblock %} 
+
+{% block content %}
+<section id="summary">
+  <h2>Post title</h2>
+  <article>
+    <img src="{% static 'blog/images/mountains.jpg' %}" alt="Post title" />
+    <address>By Akash</address>
+    <div>Last Updated on <time>May 26</time></div>
+  </article>
+</section>
+<main>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iste
+    saepe repellendus similique, enim vitae expedita sunt veritatis minus
+    blanditiis?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iste
+    saepe repellendus similique, enim vitae expedita sunt veritatis minus
+    blanditiis?
+  </p><p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iste
+    saepe repellendus similique, enim vitae expedita sunt veritatis minus
+    blanditiis?
+  </p><p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iste
+    saepe repellendus similique, enim vitae expedita sunt veritatis minus
+    blanditiis?
+  </p><p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iste
+    saepe repellendus similique, enim vitae expedita sunt veritatis minus
+    blanditiis?
+  </p>
+</main>
+{% endblock %}
