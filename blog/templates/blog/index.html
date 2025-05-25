@@ -1,10 +1,37 @@
-{% extends "base.html" %}
-
-{% block title %}
-    My Blog
-
+{% extends "base.html" %} 
+{% load static %}
+{% block title %} 
+My Blog 
+{% endblock %} 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock %}
-
 {% block content %}
-    <h1>Welcome to my blog</h1>
+
+
+<section id="welcome">
+  <header>
+    <img src="{% static 'blog/images/luffy.jpg'%}" alt="Akash - Author of  this blog" />
+    <h2>Akash  Blog's</h2>
+  </header>
+  
+  <p>Hi I am Akash and I love to code</p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+  <ul>
+    {% include "blog/includes/post.html"%}
+  </ul>
+</section>
+<section id="about">
+    <h2>What i do?</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, placeat!
+    </p>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod illo fugit consectetur nam tempora provident!
+    </p>
+</section>
 {% endblock %}
